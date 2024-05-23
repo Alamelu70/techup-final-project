@@ -11,22 +11,24 @@ const foodList = [
         name: "French Toast Casserole",
         src: "FrenchToastCasserole",
     }
-]
+];
 
 function renderFood(foodList) {
-    const recipesContainer = document.getElementById('recipes-container')
-
-    recipesContainer.innerHTML = ''
+    const recipesContainer = document.getElementById('recipes-container');
+    recipesContainer.innerHTML = '';
 
     foodList.forEach(food => {
         recipesContainer.innerHTML += `
             <a href="${food.src}.html" class="recipe-link">
-                    <img src="./${food.src}.jpg" alt="${food.name}" class="recipe-image">
-                    <div class="recipe-title">${food.name}</div>
-            `
-    }    
-    )
+                <img src="./${food.src}.jpg" alt="${food.name}" class="recipe-image">
+                <div class="recipe-title">${food.name}</div>
+            </a>
+        `;
+    });
 }
+
+// Initial render of all food items
+renderFood(foodList);
 
 function updateFoodList(event) {
     const searchTerm = event.target.value.toLowerCase();
@@ -35,3 +37,6 @@ function updateFoodList(event) {
     });
     renderFood(newFoodList);
 }
+
+// Attach the event listener to the search input field
+document.getElementById('search-input').addEventListener('input', updateFoodList);
