@@ -14,6 +14,10 @@ const foodList = [
     {
         name:"Banana Bread",
         src:"BananaBread",
+    },
+    {
+        name:"Blueberry Pecan Galette",
+        src:"BlueberryPecanGalette"
     }
 ];
 
