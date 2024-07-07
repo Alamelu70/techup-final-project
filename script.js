@@ -10,7 +10,7 @@ const foodList = [
     {
         name: "French Toast Casserole",
         src: "FrenchToastCasserole",
-    }
+    },
     {
         name:"Banana Bread",
         src:"BananaBread",
